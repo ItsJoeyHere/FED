@@ -58,6 +58,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
 
+  Ten eerste: IK WORD GEK VAN DE VOICEOVER!!! OPEN HET NIET ALS JE IN EEN BESTAND ZIT MET ALLEMAAL CODE!!!
+
+  -Het viel me als eerst op dat de voiceover heel erg snel praat. Alsof er een 2x speed op is gezet, gek genoeg is het soms best goed te volgen. Sommige teksten die B&J gebruikt hebben van die verticale streepjes (|) Dit is heel vervelend want hij spreekt dit ook uit als 'vertical line'. 
+  -Ik kwam op de pagina terecht die een uitklapbaar menuutje heeft. Dit uitklapbaar menuutje genaamd: ???bnic_tabContainer.label.tabFilter???. Dit zegt mij niks. 
+  -Hij gaf een melding waarbij de cookies niet geactiveerd waren. Dit werd benoemd als 'Alert'. Je kon wel gewoon verder door de pagina heen navigeren.
+  -Hij kan ook geen teksten lezen. Hij gaat alleen maar naar buttons toe. 
+  -Hij benoemt wanneer de link je naar een artikel brengt. Dit is handig, als je de tekst kan lezen.
+  -Daarnaast wordt er ook benoemt of je de link al hebt bezocht.
+  -De taal selectie dropdown menu heeft geen naam. Je weet dus niet wat deze dropdown menu inhoudt.
 </details>
 
 
