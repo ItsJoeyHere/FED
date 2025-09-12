@@ -22,7 +22,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Rood?
 
   #### Je focus:
-  Surface plane
+  Responsive
  
 </details>
 
@@ -43,8 +43,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <img src="readme-images/home.jpeg" width="375px" alt="De homepagina van Ben&Jerry's">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  De over ons pagina van Ben&Jerry's. 
-  <img src="readme-images/over_ben&jerrys.jpeg" width="375px" alt="De over ons pagina van Ben&Jerry's">
+  De over ons pagina van Ben&Jerry's, hoe wij ons ijs maken. 
+  <img src="readme-images/hoe_wij_ons_ijs_maken.png" width="375px" alt="De over ons pagina van Ben&Jerry's">
  
 </details>
 
@@ -77,13 +77,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/breakdown-01.png" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+  <img src="readme-images/breakdown-02.png" width="375px" alt="breakdown van de 2 pagina">
 
   ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+  <img src="readme-images/breakdown-03.png" width="375px" alt="breakdown van nog een dynamisch deel">
 
 </details>
 
