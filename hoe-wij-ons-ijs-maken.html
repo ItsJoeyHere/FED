@@ -11,26 +11,40 @@
 	<link href="styles/style.css" rel="stylesheet">
 	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-
+	<script defer src="scripts/script.js"></script>
 </head>
 
 <body>
-	<script defer src="scripts/script.js"></script>
 	<header>
+		<a href="index.html">
+			<img class="logo" src="images/logo.png" alt="logo van Ben en Jerry's">
+		</a>
+
+		<button class="hamburger" aria-hidden="true">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+
 		<nav>
-			<a href="index.html">
-				<img src="images/logo.png" alt="logo van Ben en Jerry's">
-			</a>
 			<ul>
 				<li>
 					<details>
+						<summary class="search-wrapper">
+									<input type="text" name="search" placeholder="Search Our Website">
+									<img src="images/icons/search.svg" alt="vergrootglas">
+						</summary>
+					</details>
+
+					<details>
 						<summary>
 							Smaken
+							<img src="images/icons/arrow-right.svg" alt="pijltje">
 						</summary>
 						<ul>
 							<li><a href="#">Onze smaken</a></li>
 							<li><a href="#">IJs Pints</a></li>
-							<li><a href="#">Non-Dairy, Vegan IJs</a</li>
+							<li><a href="#">Non-Dairy, Vegan IJs</a></li>
 							<li><a href="#">Ice Cream Bites</a></li>
 							<li><a href="#">Mini Cups IJs</a></li>
 							<li><a href="#">Sundaes</a></li>
@@ -47,6 +61,7 @@
 					<details>
 						<summary>
 							Activisme
+							<img src="images/icons/arrow-right.svg" alt="pijltje">
 						</summary>
 						<ul>
 							<li><a href="#">Overzicht</a></li>
@@ -61,11 +76,12 @@
 					<details>
 						<summary>
 							Over Ben & Jerry's
+							<img src="images/icons/arrow-right.svg" alt="pijltje">
 						</summary>
 						<ul>
 							<li><a href="#">Overzicht</a></li>
 							<li><a href="#">Onze structuur</a></li>
-							<li><a href="#">Hoe wij ons ijs maken</a></li>
+							<li><a href="hoe-wij-ons-ijs-maken.html">Hoe wij ons ijs maken</a></li>
 							<li><a href="#">Smaak Goeroes</a></li>
 							<li><a href="#">Waar we zakendoen</a></li>
 							<li><a href="#">IJsfabriek Hellendoorn</a></li>
@@ -81,268 +97,289 @@
 					<a href="#">Neem contact met ons op</a>
 				</li>
 
+				<details>
+					<summary>
+						<button class="search-toggle" aria-label="Search">
+							<img src="images/icons/search.svg" alt="vergrootglas">
+						</button>
+					</summary>
+				</details>
+
 			</ul>
 		</nav>
 	</header>
 
-    <main>
-        <form>
+	<div class="search-desktop">
+		<details>
+			<summary class="search-wrapper">
+				<input type="text" name="search" placeholder="Search Our Website">
+				<img src="images/icons/search.svg" alt="vergrootglas">
+			</summary>
+		</details>
+	</div>
+
+
+
+	<div class="overlay"></div>
+
+	<hr>
+	
+		<form class="terug-button">
+			<img src="images/icons/arrow-right.svg" alt="pijltje">
             <input type="button" value="Over Ben & Jerry's" onclick="history.back()">
         </form>
-        
-        <img src="images/hoe-wij-ons-ijs-maken/header.png" alt="Abstract plaatje van poloroid foto met 2 Ben & Jerry cups met een ijsje op de voorgrond.">
-        
-        <section>
-            <h1>Hoe wij ons ijs maken</h1>
+
+    <main>
+        <div class="achtergrond">
+
+			<picture>
+				<source media="(min-width: 768px)" srcset="images/hoe-wij-ons-ijs-maken/landing_US_HWMIC_1440x720.png">
+				<img src="images/hoe-wij-ons-ijs-maken/landing_US_HWMIC_1080x720.png" alt="Abstract plaatje van polaroid foto met 2 Ben & Jerry cups met een ijsje op de voorgrond.">
+			</picture>
+
+			<picture>
+				<source media="(min-width: 768px)" srcset="images/hoe-wij-ons-ijs-maken/landing_clouds_desktop.png">
+				<img src="images/hoe-wij-ons-ijs-maken/landing_clouds_mobile.png" alt="Achtergrond wolkjes">
+			</picture>
+		</div>
+        <section class="heading">
+            <h2>Hoe wij ons ijs maken</h2>
             <p>Ben & Jerry's staat bekend om onze heerlijke smaken vol chunks en swirls en gemaakt met (h)eerlijke ingrediënten. Maar weet je wat er allemaal komt kijken bij het maken van ijs?</p>
         </section>
 
-        <details>
+		<!--DATA ATTRIBUTEN GEBRUIKEN PER SECTIE-->
+		<div class="stappen-menu-wrapper">
+        <details class="stappen-menu">
             <summary>
                 Ons 13-stappenproces:
+				<img src="images/icons/arrow-right.svg" alt="pijltje">
             </summary>
             <ul>
-                <li>1. Van de boederijen</li>
-                <li>2. Naar de fabriek</li>
-                <li>3. De mengtank</li>
-                <li>4. Gepasteuriseerd en gehomogeniseerd</li>
-                <li>5. De smaakvatten</li>
-                <li>6. De vriezer</li>
-                <li>7. De chunkfeeder</li>
-                <li>8. De contherm en variegator</li>
-                <li>9. De automatische vuller</li>
-                <li>10. Spiraalverharder</li>
-                <li>11. De bundelmachine</li>
-                <li>12. Kwaliteitsborging</li>
-                <li>13. Bestemming: overal</li>
+                <li data-article="1">1. Van de boederijen</li>
+                <li data-article="2">2. Naar de fabriek</li>
+                <li data-article="3">3. De mengtank</li>
+                <li data-article="4">4. Gepasteuriseerd en gehomogeniseerd</li>
+                <li data-article="5">5. De smaakvatten</li>
+                <li data-article="6">6. De vriezer</li>
+                <li data-article="7">7. De chunkfeeder</li>
+                <li data-article="8">8. De contherm en variegator</li>
+                <li data-article="9">9. De automatische vuller</li>
+                <li data-article="10">10. Spiraalverharder</li>
+                <li data-article="11">11. De bundelmachine</li>
+                <li data-article="12">12. Kwaliteitsborging</li>
+                <li data-article="13">13. Bestemming: overal</li>
             </ul>
         </details>
-
+	</div>
         <hr>
 
         <!--///////////////////-->
         <!--DROPDOWN MENU ITEMS-->
         <!--///////////////////-->
-
-        <!--Item 1-->
-        <section>
-            <h1>1. Van de boederijen</h1>
+		<div class="items">
+        <article data-article="1">
+            <h2>1. Van de boederijen</h2>
             <p>Het begint natuurlijk allemaal met de koe. Niet slechts één, maar tienduizenden; van de honderden lokale boerderijen die hun rauwe melk verkopen tot de zuivelfabriek. In de zuivelfabriek wordt de melk gescheiden in slagroom en gecondenseerde magere melk, en vervolgens per tankwagen vervoerd naar de fabrieken waar ons ijs wordt gemaakt.</p>
             <img src="images/hoe-wij-ons-ijs-maken/1_farms.avif" alt="Afbeelding van een boederij.">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/L2YL8Xi8Uuo?si=74xjWcBBH9aCQI8-"></iframe>
-        </section>
+        </article>
 
         <!--Item 2-->
-        <section>
-            <h1>2. Naar de fabriek</h1>
+        <article data-article="2">
+            <h2>2. Naar de fabriek</h2>
             <p>Wanneer de tankwagens in de fabriek aankomen, worden de melk en de room in vier opslagsilo's van bijna 23.000 liter gepompt en koel gehouden op 2°C totdat we klaar zijn om er Ben & Jerry’s-ijs van te maken.</p>
             <img src="images/hoe-wij-ons-ijs-maken/2_factory.jpg" alt="Afbeelding van een fabriek.">
-        </section>
+        </article>
 
         <!--Item 3-->
-        <section>
-            <h1>3. De mengtank</h1>
+        <article data-article="3">
+            <h2>3. De mengtank</h2>
             <p>In het totale ijsproductieschema is het maken van de mix (en het zo voortreffelijk mogelijk maken ervan) misschien wel het belangrijkste onderdeel van het hele proces. Een zeer vaardige en ervaren persoon die bekend staat als de Mixmeester voert mengprocedures uit bij de mengtank, onze roestvrijstalen megablender van bijna 4.000 liter. 
-            <br>
+            
                 Een partij ijsmix begint met slagroom, gecondenseerde magere melk en vloeibare rietsuiker. Aan deze ingrediënten voegt de Mixmeester ook eigeel, cacaopoeder voor onze chocoladesmaken en natuurlijke stabilisatoren toe die warmteschok en de vorming van ijskristallen helpen voorkomen.
-            <br>  
+              
                 Alle ingrediënten worden gedurende 6 tot 8 minuten gemengd, wat resulteert in een witte mix van zoete room of een chocolademix.
-            <br>   
+               
                 Het resulterende mengsel wordt vervolgens via een van de twee filters overgebracht naar de buffertank. In de buffertank wordt het mengsel opgeslagen totdat het klaar is voor het pasteurisatieproces.</p>
             <img src="images/hoe-wij-ons-ijs-maken/3_blend_tank.avif" alt="Getekende afbeelding met hoe het mengen in zijn werking gaat.">
-        </section>
+        </article>
 
         <!--Item 4-->
-        <section>
-            <h1>4. Gepasteuriseerd en gehomogeniseerd</h1>
+        <article data-article="4">
+            <h2>4. Gepasteuriseerd en gehomogeniseerd</h2>
             <p>Nadat de ijsmix is gemengd, is hij klaar om gepasteuriseerd en gehomogeniseerd te worden. Pasteurisatie is het proces waarbij het mengsel wordt verwarmd om schadelijke bacteriën te doden. De pasteuriseermachine bestaat uit een reeks zeer dunne roestvrijstalen platen. Heet water (83°C) stroomt aan de ene kant van de platen, en als het koude mengsel (2°C)  aan de andere kant van de platen wordt doorgepompt, wordt warmte van het hete water overgebracht naar het mengsel, waardoor het wordt opgewarmd tot 82°C. 
-            <br>
+            
                 Voordat de mix de kans krijgt om af te koelen, komt hij in de homogenisator terecht. Daar wordt de mix onder hoge druk (ongeveer 140 kg/cm²) door een zeer kleine opening geperst zodat de vetdeeltjes van de room zo fijn verdeeld en geëmulgeerd worden dat ze niet van de rest van de mix scheiden. De homogenisator werkt als een zuigerpomp: de mix wordt bij de neergaande slag in de cilinder gezogen en bij de opgaande slag onder zeer hoge druk naar buiten geperst.
-            <br>  
+              
                 De gekoelde mix wordt vervolgens naar de tankkamer gepompt (een ruimte van 2°C met zes opslagtanks van bijna 19.000 liter), waar hij 4 tot 8 uur lang wordt bewaard om de ingrediënten te laten vermengen (het is net alsof je een saus laat sudderen of een goede wijn laat ademen - we willen het gewoon niet overhaasten!).</p>
             <img src="images/hoe-wij-ons-ijs-maken/4_homogenizer.avif" alt="Getekende afbeelding met hoe het gepasteuriseerd wordt.">
-        </section>
+        </article>
 
         <!--Item 5-->
-        <section>
-            <h1>5. De smaakvatten</h1>
+        <article data-article="5">
+            <h2>5. De smaakvatten</h2>
             <p>Een van de redenen waarom Ben & Jerry's-ijs zo goed is, kan met één woord worden samengevat: smaak. We nemen onze smaken (en onze smaaktechnieken) bijzonder serieus. De mensen die met de smaakvatten werken, zijn experts in de kunst van het aromatiseren, en alleen de beste smaakingrediënten mogen vermengd worden met een smaakvat vol met onze ijsmix.
-            <br>
+            
                 Zodra het mengsel heeft ‘gesudderd’, wordt het vanuit de tankkamer naar de smaakvaten gepompt: een reeks roestvrijstalen vaten met elk ruimte voor bijna 2.000 liter van de mix. Hier wordt de mix getransformeerd van praktisch smakeloos naar euforisch smaakvol dankzij de toevoeging van een ongelooflijke reeks smaakstoffen, purees en extracten, zoals vanille, pure pepermunt, fruitextracten, bananenpuree en af en toe zelfs enkele likeuren.</p>
             <img src="images/hoe-wij-ons-ijs-maken/5_flavor_vats.avif" alt="Getekende afbeelding met hoe de smaakvaten werken.">
-        </section>
+        </article>
 
         <!--Item 6-->
-        <section>
-            <h1>6. De vriezer</h1>
+        <article data-article="6">
+            <h2>6. De vriezer</h2>
             <p>Zodra de juiste hoeveelheid smaakstoffen is toegevoegd, wordt de mix naar de vriezer gepompt. De vriezers in onze fabriek in Waterbury maken gebruik van vloeibare ammoniak als vriesmiddel (-4°C) en kunnen meer dan 2.500 liter van de mix per uur bevriezen.
-            <br>
+            
                 Zo werkt het: de mix wordt door een lange, ijskoude cilinder gepompt die bekend staat als het vat. Naarmate de mix aan de wand van het vat bevriest, wordt het weggeschraapt door draaiende messen. Als het aan de voorkant van het vat komt, is het niet langer een mengsel: het is ijs!
-            <br>   
+               
                 De mix gaat de vriezer in bij 2°C en komt eruit bij -5°C. Dat is dezelfde temperatuur en consistentie als softijs of ‘creemee’, zoals het in Vermont wordt genoemd.</p>
             <img src="images/hoe-wij-ons-ijs-maken/6_freezer.jpg" alt="Afbeelding van een vriezer.">
-        </section>
+        </article>
 
         <!--Item 7-->
-        <section>
-            <h1>7. De chunkfeeder</h1>
+        <article data-article="7">
+            <h2>7. De chunkfeeder</h2>
             <p>Nadat we de mix hebben bevroren tot een lekker romige -5°C, hebben we de keuze: als we alleen maar smaken zonder chunks maken, zoals vanille of chocolade, wordt het ijs rechtstreeks naar de bekervulmachine gepompt, maar als we smaken met chunks maken, gaat het ijs eerst gaat door de chunkfeeder.
-            <br>
+            
                 Vóór Ben & Jerry’s was fruit het enige dat ijsmakers ooit in hun ijs stopten. Daarom wordt de machine die chunks aan ons ijs toevoegt eigenlijk een ‘fruit-feeder’ genoemd. Maar als je bedenkt met hoeveel andere traktaties we de feeder nog meer kunnen vullen, van klodders chocoladekoekdeeg tot toffee-achtige brownies, en van koekjes en snoepjes tot noten en alles daartussenin, is het niet gek dat we hem een andere naam hebben gegeven!
-            <br> 
+             
                 Simpel gezegd voegt de chunkfeeder chunks toe aan de stroom van ijs. De chunks worden aan de bovenkant in de trechter van de chunkfeeder geladen en aan de onderkant stuurt een avegaar een gestage stroom chunks naar een sterwiel. Terwijl het sterwiel draait, duwt het de chunks in de stroom bevroren ijs die door de feeder stroomt. Het ijs met chunks gaat uiteindelijk door een speciale blender, dat de chunks door de stroom van ijs mengt en zo een gelijkmatige verdeling garandeert.</p>
             <img src="images/hoe-wij-ons-ijs-maken/7_chunk_feeder.jpg" alt="Getekende afbeelding hoe de chunks gemaakt worden.">
-        </section>
+        </article>
 
         <!--Item 8-->
-        <section>
-            <h1>8. De contherm en variegator</h1>
+        <article data-article="8">
+            <h2>8. De contherm en variegator</h2>
             <p>Heb je je ooit afgevraagd hoe we die dikke, rijke swirls zo mooi door een beker ijs laten rondwervelen? Het chique woord voor ‘swirl’ is ‘variant’ en of het nu fudge, karamel, pindakaas, marshmallow of fruit is, we gebruiken altijd de beste en fantasierijkste varianten die we kunnen vinden. Maar die geweldige varianten zouden nooit hun weg kunnen vinden naar een beker van ons ijs zonder een geweldig variantgeleidingssysteem.
-            <br>
+            
                 Gelukkig hebben we toevallig het beste variantgeleidingssysteem dat er is!
-            <br>    
+                
                 Zo werkt het:
-            <br>    
+                
                 • Varianten gaan eerst door de contherm, waardoor hun temperatuur net genoeg daalt om te voorkomen dat ze zich ophopen (wat geen goede zaak is).
-            <br>    
+                
                 • Goed gekoelde varianten gaan door de variegator, die ze in wezen in de stroom van ijs injecteert (wat een hele goede zaak is wanneer het naar behoren werkt en een hele rommelige zaak wanneer dat niet zo is).</p>
             <img src="images/hoe-wij-ons-ijs-maken/8_variegator.jpg" alt="Getekende afbeelding hoe de variegator proces werkt.">
-        </section>
+        </article>
 
         <!--Item 9-->
-        <section>
-            <h1>9. De automatische vuller</h1>
+        <article data-article="9">
+            <h2>9. De automatische vuller</h2>
             <p>Nadat de chunks en de swirls zijn toegevoegd, is het ijs klaar om in bekers te worden gedaan. Dit wordt gedaan met een verbazingwekkende machine: de automatische vuller. 
-            <br>
+            
                 De automatische vuller vult niet alleen ongeveer 120 bekers per minuut, maar voert ook taken uit die aan het vullen voorafgaan, zoals het twee-aan-twee in perfecte positie zetten van de bekers, zodat de vulkop ze kan vullen.
-            <br>   
+               
                 Bovendien begeleidt de vuller de gevulde bekers naar de bedekselaar, die de deksels netjes op de bekers plaatst en aanduwt.
-            <br>    
+                
                 Ten slotte tilt een vernuftige bekeroptiller de bekers uit de bedekselaar, waarna een kleine hefboom ze op een transportband duwt, op weg naar de volgende stap in het proces.</p>
             <img src="images/hoe-wij-ons-ijs-maken/9_automatic_filler.jpg" alt="Getekende afbeelding hoe de potten worden gevuld.">
-        </section>
+        </article>
 
         <!--Item 10-->
-        <section>
-            <h1>10. Spiraalverharder</h1>
+        <article data-article="10">
+            <h2>10. Spiraalverharder</h2>
             <p>Voordat het verpakte ijs kan worden bewaard of verzonden, moet het verder worden ingevroren: van de halfbevroren temperatuur van -5°C tot een volledig bevroren vaste vorm van ten minste -12°C. Het proces wordt ‘verharding’ genoemd en vindt plaats in de spiraalverharder.
-            <br>
+            
                 De bekers reizen met een transportband vanuit onze productieruimte naar de spiraalverhardingstunnel, een megatransportband met twee verdiepingen in de vorm van een kurkentrekker, letterlijk het coolste in de hele fabriek. 
-            <br>    
+                
                 De werkelijke temperatuur in de spiraalverhardingstunnel is -1°C, maar enorme ventilatoren in de tunnel creëren een gevoelstemperatuur van -15°C. In deze arctische omgeving bewegen de bekers drie uur lang langzaam de spiraalvormige transportband op. Wanneer ze de top bereiken, is hun temperatuur gedaald van -5°C (de consistentie van softijs) tot -12°C (volledig bevroren vaste consistentie!)</p>
             <img src="images/hoe-wij-ons-ijs-maken/10_spiral_hardener.jpg" alt="Getekende afbeelding hoe de potten worden gekoeld.">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/6DpL52ELR68?si=GiRpisP_aK4iqH2m"></iframe>
-        </section>
+        </article>
 
         <!--Item 11-->
-        <section>
-            <h1>11. De bundelmachine</h1>
+        <article data-article="11">
+            <h2>11. De bundelmachine</h2>
             <p>Nadat de ijsbekers bevroren zijn, verpakken we ze voor verzending.  Eerst draait een omvormer elke tweede ijsbeker ondersteboven. Dan zorgt een vriezermedewerker ervoor dat 8 bekers (2 evenwijdige rijen van 4 bekers, waarbij elke tweede beker is omgekeerd) op de juiste manier samengevoegd zijn om de bundelmachine in te gaan. De bundelmachine is een warmtetunnel die plastic rond de bundel van 8 bekers wikkelt. Het gebundelde pakket van 8 wordt een ‘koker’ genoemd en elke koker is gelijk aan bijna 3,8 liter ijs. Vriezermedewerkers stapelen de kokers op verzendpallets die vervolgens bij -29°C worden opgeslagen in ons magazijn in afwachting van verzending.</p>
             <img src="images/hoe-wij-ons-ijs-maken/11_bundler.jpg" alt="Getekende afbeelding hoe de potten worden gebundeld.">
-        </section>        
+        </article>        
 
         <!--Item 12-->
-        <section>
-            <h1>12. Kwaliteitsborging</h1>
+        <article data-article="12">
+            <h2>12. Kwaliteitsborging</h2>
             <p>Ondertussen zijn de QA-medewerkers in ons Quality Assurance-lab fanatici als het gaat om het garanderen dat elke smaak van Ben & Jerry's-ijs voldoet aan onze strenge kwaliteitsnormen.
-            <br>
+            
                 Elke Ben & Jerry’s-productierun die ze goedkeuren, geeft onze ijsverkeersleiders de cruciale toestemming die ze nodig hebben om Ben & Jerry’s-producten naar hun eindbestemming te verschepen …</p>
             <img src="images/hoe-wij-ons-ijs-maken/12_qa.avif" alt="Afbeelding van een persoon die de laatste checks doet.">
-        </section>
+        </article>
 
         <!--Item 13-->
-        <section>
-            <h1>13. Bestemming: overal</h1>
+        <article data-article="13">
+            <h2>13. Bestemming: overal</h2>
             <p>Onze definitie van ‘overal’ breidt zich ieder jaar verder uit!
-            <br>
+            
                 De producten van Ben & Jerry's worden landelijk en wereldwijd gedistribueerd in supermarkten, buurtwinkels, restaurants, bioscopen en andere ijsvriendelijke locaties. En als het gaat om ijsvriendelijke locaties, zijn we natuurlijk van mening dat Scoop Shops van Ben & Jerry's verreweg het meest ijsvriendelijk zijn!</p>
                 <img src="images/hoe-wij-ons-ijs-maken/13_world.jpg" alt="Getekende afbeelding van een wereldbol met ijsjes eromheen. Het ijsbolletje bevat een vlag van elk land waar Ben & Jerry's naar toe leverd.">
                 
-        </section>
+        </article>
+	</div>
 
     </main>
     
     <footer>
-		<section>
+		<div class="background-color-top">
+		<section class="footer-top">
 			<h2>Wij maken dolgraag ijs, maar ons werk krijgt pas echt betekenis wanneer wij ons bedrijf inzetten om de wereld mooier te maken.</h2>
-				<ul>
-					<li>
-						<img src="images/footer-card-1.svg" alt="Icoon van een koe.">
-					</li>
-					<li>
-						<h3>Zorgvuldig uitgekozen ingrediënten</h3>
-					</li>
-					<li>
-						<p>Onze ingrediënten dragen bij aan positieve verandering en zorgen ervoor dat ons ijs sensationeel smaakt!</p>
-					</li>
-					<li>
-						<a href="#">Productinkoop</a>
-					</li>
-				</ul>
+				<div class="card">	
+					<img src="images/footer-card-1.svg" alt="Icoon van een koe.">
+						<div class="card-content">
+							<h3>Zorgvuldig uitgekozen ingrediënten</h3>
+							<p>Onze ingrediënten dragen bij aan positieve verandering en zorgen ervoor dat ons ijs sensationeel smaakt!</p>
+							<a href="#">Productinkoop</a>
+						</div>
+				</div>
+				
+				<div class="card">
+					<img src="images/footer-card-2.svg" alt="Icoon van het 'peace' teken.">
+						<div class="card-content">
+							<h3>Gedeeld succes</h3>
+							<p>Ons doel is welvaart te creëren voor iedereen die verbonden is met ons bedrijf.</p>
+							<a href="#">Onze missie en waarden</a>
+					</div>
+				</div>
 
-				<ul>
-					<li>
-						<img src="images/footer-card-2.svg" alt="Icoon van het 'peace' teken.">
-					</li>
-					<li>
-						<h3>Gedeeld succes</h3>
-					</li>
-					<li>
-						<p>Ons doel is welvaart te creëren voor iedereen die verbonden is met ons bedrijf.</p>
-					</li>
-					<li>
-						<a href="#">Onze missie en waarden</a>
-					</li>
-				</ul>
-
-				<ul>
-					<li>
-						<img src="images/footer-card-3.svg" alt="Icoon van de wereld.">
-					</li>
-					<li>
-						<h3>Een verschil maken</h3>
-					</li>
-					<li>
-						<p>Wij spreken ons uit over onderwerpen die ons nauw aan het hart liggen.</p>
-					</li>
-					<li>
-						<a href="#">Onderwerpen die wij belanrijk vinden</a>
-					</li>
-				</ul>
+				<div class="card">
+					<img src="images/footer-card-3.svg" alt="Icoon van de wereld.">
+						<div class="card-content">
+							<h3>Een verschil maken</h3>
+							<p>Wij spreken ons uit over onderwerpen die ons nauw aan het hart liggen.</p>
+							<a href="#">Onderwerpen die wij belanrijk vinden</a>
+					</div>
+				</div>
 		</section>
+	</div>
 
-		<img src="images/woody.svg" alt="Afbeelding van een koe met een luidspreker.">
+	<img class="woody" src="images/woody.svg" alt="Afbeelding van een koe met een luidspreker.">
+
+
+	<div class="background-color-bottom">
 	
+		<div class="footer-bottom">
+
 		<section>
 			<h3>Meld je aan voor onze nieuwsbrief</h3>
 			<p>Wij zorgen ervoor dat je als eerste op de hoogte bent van nieuwe smaken, fun activiteiten en sociale initiatieven van Ben & Jerry's! Get the scoop!</p>
-		
-			<form action="">
-				<input type="email" placeholder="adres@email.com">
-				<input type="submit" value=">">
+			<form>
+				<input class="textfield" type="email" placeholder="Voer je e-mailadres in">
+				<input class="submit" type="image" src="images/icons/arrow-right.svg" alt="submit">
 			</form>
-		</section>
-	
+		</section>	
+		
 		<section>
-			<ul>
-				<li><h3>Blijf op de hoogte</h3></li>
-				<li><a href="#">Stuur ons feedback</a></li>
-				<li><a href="#">unsubscribe</a></li>
-			</ul>
+			<h3>Blijf op de hoogte</h3>
+			<a href="#">Stuur ons feedback</a>
+			<a href="#">unsubscribe</a>
 		</section>
 
 		<section>
 			<h3>Volg ons!</h3>
 			<ul>
-				<li>
-					<a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-					<a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-  					<a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
-  					<a href="https://x.com" target="_blank"><i class="fab fa-x-twitter"></i></a>
-				</li>
+				<li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+				<li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+				<li><a href="https://x.com" target="_blank"><i class="fab fa-x-twitter"></i></a></li>
 			</ul>
 		</section>
-
+		
 		<section>
 			<ul>
 				<li><h3>Meer informatie</h3></li>
@@ -352,44 +389,45 @@
 			</ul>
 		</section>
 
-		<section>
+		
 			<details>
 				<summary>
 					<img src="images/icons/flag_NL.png" alt="Nederlands">
+					<img src="images/icons/arrow-right.svg" alt="pijltje naar beneden">
 				</summary>
 				<ul>
-					<li><a href="#">Australië<img src="images/icons/flag_AU.jpeg" alt="Australië"></li></a>
-					<li><a href="#">België<img src="images/icons/flag_BE.png" alt="België"></li></a>
-					<li><a href="#">Brazilië<img src="images/icons/flag_BR.jpeg" alt="Brazilië"></li></a>
-					<li><a href="#">Canada<img src="images/icons/flag_CA.gif" alt="Canada"></li></a>
-					<li><a href="#">Zwitserland<img src="images/icons/flag_CH.gif" alt="Zwitserland"></li></a>
-					<li><a href="#">Tsjechië<img src="images/icons/flag_CZ.png" alt="Tsjechië"></li></a>
-					<li><a href="#">Duitsland<img src="images/icons/flag_DE.gif" alt="Duitsland"></li></a>
-					<li><a href="#">Denemarken<img src="images/icons/flag_DK.png" alt="Denemarken"></li></a>
-					<li><a href="#">Spanje<img src="images/icons/flag_ES.jpeg" alt="Spanje"></li></a>
-					<li><a href="#">Finland<img src="images/icons/flag_FI.png" alt="Finland"></li></a>
-					<li><a href="#">Frankrijk<img src="images/icons/flag_FR.png" alt="Frankrijk"></li></a>
-					<li><a href="#">England<img src="images/icons/flag_GB.jpeg" alt="England"></li></a>
-					<li><a href="#">Griekenland<img src="images/icons/flag_GR.png" alt="Griekenland"></li></a>
-					<li><a href="#">Ierland<img src="images/icons/flag_IE.png" alt="Ierland"></li></a>
-					<li><a href="#">Italië<img src="images/icons/flag_IT.png" alt="Italië"></li></a>
-					<li><a href="#">Korea<img src="images/icons/flag_KR.png" alt="Korea"></li></a>
-					<li><a href="#">Mexico<img src="images/icons/flag_MX.jpeg" alt="Mexico"></li></a>
-					<li><a href="#">Nederland<img src="images/icons/flag_NL.png" alt="Nederland"></li></a>
-					<li><a href="#">Norwegen<img src="images/icons/flag_NO.png" alt="Norwegen"></li></a>
-					<li><a href="#">Nieuw-Zeeland<img src="images/icons/flag_NZ.png" alt="Nieuw-Zeeland"></li></a>
-					<li><a href="#">Polen<img src="images/icons/flag_PL.png" alt="Polen"></li></a>
-					<li><a href="#">Puerto Rico<img src="images/icons/flag_PR.png" alt="Puerto Rico"></li></a>
-					<li><a href="#">Portugal<img src="images/icons/flag_PT.png" alt="Portugal"></li></a>
-					<li><a href="#">Zweden<img src="images/icons/flag_SE.png" alt="Zweden"></li></a>
-					<li><a href="#">Singapore<img src="images/icons/flag_SE.png" alt="Singapore"></li></a>
-					<li><a href="#">Thailand<img src="images/icons/flag_TH.png" alt="Thailand"></li></a>
-					<li><a href="#">Amerika<img src="images/icons/flag_US.gif" alt="Amerika"></li></a>
+					<li><a href="#">Australië<img src="images/icons/flag_AU.jpeg" alt="Australië"></a></li>
+					<li><a href="#">België<img src="images/icons/flag_BE.png" alt="België"></a></li>
+					<li><a href="#">Brazilië<img src="images/icons/flag_BR.jpeg" alt="Brazilië"></a></li>
+					<li><a href="#">Canada<img src="images/icons/flag_CA.gif" alt="Canada"></a></li>
+					<li><a href="#">Zwitserland<img src="images/icons/flag_CH.gif" alt="Zwitserland"></a></li>
+					<li><a href="#">Tsjechië<img src="images/icons/flag_CZ.png" alt="Tsjechië"></a></li>
+					<li><a href="#">Duitsland<img src="images/icons/flag_DE.gif" alt="Duitsland"></a></li>
+					<li><a href="#">Denemarken<img src="images/icons/flag_DK.png" alt="Denemarken"></a></li>
+					<li><a href="#">Spanje<img src="images/icons/flag_ES.jpeg" alt="Spanje"></a></li>
+					<li><a href="#">Finland<img src="images/icons/flag_FI.png" alt="Finland"></a></li>
+					<li><a href="#">Frankrijk<img src="images/icons/flag_FR.png" alt="Frankrijk"></a></li>
+					<li><a href="#">England<img src="images/icons/flag_GB.jpeg" alt="England"></a></li>
+					<li><a href="#">Griekenland<img src="images/icons/flag_GR.png" alt="Griekenland"></a></li>
+					<li><a href="#">Ierland<img src="images/icons/flag_IE.png" alt="Ierland"></a></li>
+					<li><a href="#">Italië<img src="images/icons/flag_IT.png" alt="Italië"></a></li>
+					<li><a href="#">Korea<img src="images/icons/flag_KR.png" alt="Korea"></a></li>
+					<li><a href="#">Mexico<img src="images/icons/flag_MX.jpeg" alt="Mexico"></a></li>
+					<li><a href="#">Nederland<img src="images/icons/flag_NL.png" alt="Nederland"></a></li>
+					<li><a href="#">Norwegen<img src="images/icons/flag_NO.png" alt="Norwegen"></a></li>
+					<li><a href="#">Nieuw-Zeeland<img src="images/icons/flag_NZ.png" alt="Nieuw-Zeeland"></a></li>
+					<li><a href="#">Polen<img src="images/icons/flag_PL.png" alt="Polen"></a></li>
+					<li><a href="#">Puerto Rico<img src="images/icons/flag_PR.png" alt="Puerto Rico"></a></li>
+					<li><a href="#">Portugal<img src="images/icons/flag_PT.png" alt="Portugal"></a></li>
+					<li><a href="#">Zweden<img src="images/icons/flag_SE.png" alt="Zweden"></a></li>
+					<li><a href="#">Singapore<img src="images/icons/flag_SE.png" alt="Singapore"></a></li>
+					<li><a href="#">Thailand<img src="images/icons/flag_TH.png" alt="Thailand"></a></li>
+					<li><a href="#">Amerika<img src="images/icons/flag_US.gif" alt="Amerika"></a></li>
 				</ul>
 			</details>
-		</section>
+		
 
-		<section>
+		<div class="laatste-ul">
 			<ul>
 				<li><a href="#">Toegankelijkheid</a></li>
 				<li><a href="#">Neem contact met ons op</a></li>
@@ -398,9 +436,10 @@
 				<li><a href="#">Gebruiksvoorwaarden</a></li>
 				<li><a href="#">Sitemap</a></li>
 			</ul>
-		</section>
-
-	</footer>
+		</div>
+	</div>
+</div>
+</footer>
 </body>
 	
 </html>
