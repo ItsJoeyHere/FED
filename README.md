@@ -97,7 +97,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  HTML staat al helemaal klaar om opgemaakt te worden! Alles ging prima en heb al een paar nieuwe tags leren te gebruiken.
 
 
   ### Agenda voor meeting
@@ -113,7 +113,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
+  - 2e HTML pagina bestond uit allemaal h1 tags ipv h2
   - punt 2
   - nog een punt
   - ...
@@ -130,7 +130,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Begonnen me de CSS. Eerste pagina is al bijna klaar op de header na. Het javascript gedeelte lukte nog niet helemaal lekker voor de header.
 
 
   ### Agenda voor meeting
@@ -163,8 +163,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+  De articles geven nog niet aan waar ze over gaan als je hovered over de meer lezen knoppen. Voiceover benoemt alleen nog maar de knop "Meer lezen", dit kan misschien nog verbetert worden met een alt tekstje. Ditzelfde geldt voor de social media icons.
 
+De talen in de footer geven aan wat voor land het is, maar geeft niet aan dat het om talen gaat. Dit kan misschien ook nog verbeterd worden.
+
+De 2e pagina drop down menu kan je niet door de opties heen tabben. 
 </details>
 
 
@@ -177,7 +180,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 3<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Alles is zo goed als af. Alleen nog wat finishing touches. Ik ga thuis nog kijken of ik wat classes uit mijn code kan halen. 
 
 
   ### Agenda voor meeting
@@ -193,10 +196,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Ik heb samen met Nienke nog gekeken hoe ik wat kleine probleempjes kon oplossen. 
 
 </details>
 
